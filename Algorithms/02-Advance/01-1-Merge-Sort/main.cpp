@@ -4,7 +4,6 @@
 #include <iostream>
 #include <algorithm>
 #include <vector>
-#include "Insertion-Sort.h"
 using namespace std;
 
 vector<int> merge(vector<int> left,vector<int> right)
