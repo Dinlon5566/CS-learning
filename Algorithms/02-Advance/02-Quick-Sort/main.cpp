@@ -8,12 +8,17 @@ using namespace std;
 
 template <typename T>
 int partition(T nums[],int left,int right){
-    int result;
-    T tmp[left];
+    T tmp=nums[left];
 
-    //todo
-
-    return result;
+    int load=left;
+    for(int i=left+1;i<=right;i++){
+        if(nums[i]<tmp){
+            load++;
+            swap(nums[load],nums[i]);
+        }
+    }
+    swap(nums[load],nums[left]);
+    return load;
 }
 
 template <typename T>
@@ -25,7 +30,6 @@ void __quickSort(T nums[],int left,int right){
     int flag=partition(nums,left,right);
     __quickSort(nums,left,flag-1);
     __quickSort(nums,flag+1,right);
-
 }
 
 template <typename T>
