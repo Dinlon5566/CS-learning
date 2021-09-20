@@ -26,3 +26,6 @@ hs_err_pid*
 *.o
 *.layout
 *.depend
+
+#my set
+IGNORE_FILE/
